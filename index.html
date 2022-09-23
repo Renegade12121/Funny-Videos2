@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            background: #fff;
+            font-family: monospace;
+            display: grid;
+            grid-template-rows: 1fr 1fr 1fr;
+            grid-template-columns: 1fr 1fr 1fr;
+            align-items: center;
+            justify-items: center;
+            width: 100%;
+            height: 50px;
+            padding: 5px;
+            position: fixed;
+        }
+
+        .logo {
+            font-size: 18px;
+            text-transform: uppercase;
+            cursor: pointer;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            font-size: 17px;
+            color: #000;
+            margin-right: 15px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+
+        }
+
+        .nav-links a:hover {
+            border-bottom: 3px solid tomato;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            text-align: center;
+            border-radius: 10px;
+            text-align: center;
+            background-color: tomato;
+            color: #fff;
+            border: 1px solid #fff;
+            font-size: 17px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            border: 1px solid tomato;
+            background-color: #fff;
+            color: tomato;
+        }
+
+        .tom {
+            color: tomato;
+        }
+
+        .hero {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            background-color: #FAFAFA;
+            font-family: monospace;
+        }
+
+        .hero-content {
+            margin-top: 200px;
+            margin-left: 100px;
+            text-align: justify;
+        }
+
+        .image img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            margin-bottom: 10px;
+        }
+
+        .hero-content h1 {
+            font-weight: 900;
+            font-size: 60px;
+            margin-top: 20px;
+            text-transform: uppercase;
+        }
+
+        .hero-content p {
+            line-height: 1.5;
+            font-size: 18px;
+        }
+
+        .btn1 {
+            border: 1px solid #fff;
+            background-color: tomato;
+            padding: 10px 15px;
+            margin-top: 20px;
+            text-align: center;
+            color: #fff;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 17px;
+        }
+
+        .btn1:hover {
+            border: 1px solid tomato;
+            background-color: #fff;
+            color: tomato;
+
+        }
+
+        .card {
+            width: 100%;
+            height: 100vh;
+        }
+
+        .cards {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            width: 100%;
+            margin-top: 50px;
+
+        }
+
+        .card .center {
+            text-transform: uppercase;
+            text-align: center;
+            margin-top: 20px;
+            font-family: monospace;
+            font-weight: 900;
+            text-decoration: underline;
+
+        }
+
+        .card1 {
+            width: 30%;
+
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            padding: 10px;
+        }
+
+        .card1 .card1-content {
+            font-family: monospace;
+            padding: 10px;
+
+        }
+
+        .card2 .card2-content {
+            font-family: monospace;
+            padding: 10px;
+        }
+
+        .card3 .card3-content {
+            font-family: monospace;
+            padding: 10px;
+
+        }
+
+        .card1 .card1-content h1 {
+            font-weight: 900;
+            text-transform: uppercase;
+        }
+
+        .card2 .card2-content h1 {
+            font-weight: 900;
+            text-transform: uppercase;
+        }
+
+        .card3 .card3-content h1 {
+            font-weight: 900;
+            text-transform: uppercase;
+        }
+        .card3 .card3-content p{
+            font-size: 17px;
+            line-height: 1.5;
+        }
+        .card1 .card1-content p{
+            font-size: 17px;
+            line-height: 1.5;
+        }  
+        .card2 .card2-content p{
+            font-size: 17px;
+            line-height: 1.5;
+        }
+
+        .card2 {
+            width: 30%;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            padding: 10px;
+
+        }
+
+        .card3 {
+            width: 30%;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            padding: 10px;
+
+        }
+
+        .card1 .image1 img {
+            width: 100%;
+            height: 100%;
+            border-radius: 8px;
+            object-fit: cover;
+
+
+        }
+
+        .card2 .image2 img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+
+        }
+
+        .card3 .image3 img {
+            width: 100%;
+            height: 100%;
+            border-radius: 8px;
+            object-fit: cover;
+
+        }
+        .btn2{
+            margin-top: 25px;
+            padding: 10px 15px;
+            background-color: tomato;
+            text-align: center;
+            font-size: 17px;
+            border-radius: 5px;
+            color: #fff;
+            border: 1px solid #fff;
+            cursor: pointer;
+
+        }
+        .btn2:hover{
+            background-color: #fff;
+            border: 1px solid tomato;
+            color: tomato;
+        }
+        footer{
+            text-align: center;
+            background:tomato;
+            color: #fff;
+            padding: 40px;
+            font-size: 20px;
+            font-weight: 700;
+        }
+        .map{
+           height: 550px;
+            width: 80%;
+           margin: 20px;
+            border: 2px solid #727272;
+            border-radius: 5px;
+        
+        }
+        .my-location{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        .zic{
+            text-transform: uppercase;
+            text-align: center;
+            margin-top: 20px;
+            font-family: monospace;
+            font-weight: 900;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="logo">
+            <h1>Lo<span class="tom">go</span></h1>
+        </div>
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">Blogs</a>
+            <a href="#">Gallery</a>
+            <a href="#">Contact</a>
+            <a href="#">Services</a>
+        </div>
+        <div class="button">
+            <button class="btn">Download</button>
+        </div>
+    </div>
+
+    <div class="hero">
+
+        <div class="hero-content">
+            <h1>Web Developer</h1>
+            <p>I code in Ruby, JavaScript, Python and more. <br> I've been programming for over 10 years and lovin' it!
+                <br>
+                I'm a web developer with experience in CSS, PHP, Ruby on Rails, jQuery, Git. <br> I'm passionate about
+                clean
+                code and user interfaces.
+            </p>
+            <button class="btn1">Download</button>
+        </div>
+        <div class="image">
+            <img src="/images/img1.jpg" alt="">
+        </div>
+
+    </div>
+
+    <div class="card">
+        <h1 class="center">our service</h1>
+        <div class="cards">
+            <div class="card1">
+                <div class="image1">
+                    <img src="https://images.pexels.com/photos/2004161/pexels-photo-2004161.jpeg?auto=compress&cs=tinysrgb&w=600"
+                        alt="">
+                </div>
+                <div class="card1-content">
+                    <h1>Software Development</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, similique molestiae. Deserunt, sit.
+                        Ex
+                        atque maxime suscipit odit accusantium dolor corrupti architecto, facilis ratione! Voluptas est
+                        suscipit officiis iste culpa.</p>
+                        <button class="btn2">Read more</button>
+                </div>
+            </div>
+            <div class="card2">
+                <div class="image2">
+                    <img src="https://images.pexels.com/photos/270557/pexels-photo-270557.jpeg?auto=compress&cs=tinysrgb&w=600"
+                        alt="">
+                </div>
+                <div class="card2-content">
+                    <h1>App Development</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, similique molestiae. Deserunt, sit.
+                        Ex
+                        atque maxime suscipit odit accusantium dolor corrupti architecto, facilis ratione! Voluptas est
+                        suscipit officiis iste culpa.</p>
+                        <button class="btn2">Read more</button>
+                </div>
+            </div>
+            <div class="card3">
+                <div class="image3">
+                    <img src="https://images.pexels.com/photos/270632/pexels-photo-270632.jpeg?auto=compress&cs=tinysrgb&w=600"
+                        alt="">
+                </div>
+                <div class="card3-content">
+                    <h1>Web designing</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, similique molestiae. Deserunt, sit.
+                        Ex
+                        atque maxime suscipit odit accusantium dolor corrupti architecto, facilis ratione! Voluptas est
+                        suscipit officiis iste culpa.</p>
+                        <button class="btn2">Read more</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="my-location">
+        <h1 class="zic">My location</h1>
+        <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d114311.4778584471!2d87.20176680726536!3d26.448195378573608!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ef744704331cc5%3A0x6d9a85e45c54b3fc!2z4KSs4KS_4KSw4KS-4KSf4KSo4KSX4KSwIDU2NjEzLCDgpKjgpYfgpKrgpL7gpLI!5e0!3m2!1sne!2sin!4v1663960564874!5m2!1sne!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <footer>
+        <p>&copy; Designed By Sashi Rajabnshi</p>
+    </footer>
+</body>
+
+</html>
